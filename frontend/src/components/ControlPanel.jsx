@@ -14,7 +14,7 @@ const ControlPanel = ({ theme, setTheme }) => {
 
   const fetchConfig = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/system/config');
+      const res = await axios.get('https://ai-city-brain.onrender.com/api/system/config');
       setConfig(res.data);
     } catch (err) {
       console.error(err);
@@ -24,7 +24,7 @@ const ControlPanel = ({ theme, setTheme }) => {
   const updateConfig = async (newConfig) => {
     setSaving(true);
     try {
-      await axios.post('http://localhost:8000/api/system/config', newConfig);
+      await axios.post('https://ai-city-brain.onrender.com/api/system/config', newConfig);
       setConfig(newConfig);
       toast.success("SYSTEM_CONFIG_UPDATED: SYNCING_NODES");
     } catch (err) {

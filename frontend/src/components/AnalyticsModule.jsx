@@ -10,7 +10,7 @@ const AnalyticsModule = ({ theme }) => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/analytics');
+      const res = await axios.get('https://ai-city-brain.onrender.com/analytics');
       setData(res.data.slice(-10)); // Last 10 points as requested
       setLoading(false);
     } catch (err) {

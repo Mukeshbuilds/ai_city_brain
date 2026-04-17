@@ -16,7 +16,7 @@ const PolicyAgent = ({ theme = 'dark' }) => {
     const newState = !current;
     setPolicies(prev => ({ ...prev, [policy]: newState }));
     try {
-      await axios.post(`http://localhost:8000/simulation/policy?policy=${policy}&active=${newState}`);
+      await axios.post(`https://ai-city-brain.onrender.com/simulation/policy?policy=${policy}&active=${newState}`);
     } catch (e) {
       setPolicies(prev => ({ ...prev, [policy]: current }));
     }

@@ -31,7 +31,7 @@ import ReportsModule from '../components/ReportsModule';
 import ControlPanel from '../components/ControlPanel';
 import APIMonitor from '../components/APIMonitor';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://ai-city-brain.onrender.com';
 const CLICK_SOUND = 'https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3';
 
 const Dashboard = () => {

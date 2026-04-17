@@ -9,7 +9,7 @@ const APIMonitor = ({ theme }) => {
 
   const fetchStatus = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/status');
+      const res = await axios.get('https://ai-city-brain.onrender.com/api/status');
       setStatus(res.data);
       setLoading(false);
     } catch (err) {

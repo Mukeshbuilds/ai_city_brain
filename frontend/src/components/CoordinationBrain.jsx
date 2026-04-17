@@ -18,7 +18,7 @@ const CoordinationBrain = ({ data, theme = 'dark' }) => {
   const handleOptimize = async () => {
     try {
       const newState = !isOptimized;
-      await axios.post(`http://localhost:8000/simulation/policy?policy=green_energy&active=${newState}`);
+      await axios.post(`https://ai-city-brain.onrender.com/simulation/policy?policy=green_energy&active=${newState}`);
       toast.info(newState ? "ENERGY_OPTIMIZATION_ENABLED" : "ENERGY_OPTIMIZATION_DISABLED", {
         icon: <Zap size={16} color="var(--neon-orange)" />,
         style: { background: 'var(--bg-glass)', border: '1px solid var(--neon-orange)', color: 'var(--text-primary)', fontFamily: 'Orbitron', fontSize: '0.7rem' }

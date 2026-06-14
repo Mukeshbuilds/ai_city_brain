@@ -1,6 +1,8 @@
-# AI City Brain - Urban Cognitive System
+# AI City Brain - Urban Cognitive System 
+live website - https://aicitybrain.netlify.app/login
 
 Welcome to the future of urban management. **AI City Brain** is a high-end, cyberpunk-themed smart city control dashboard designed for real-time monitoring and intelligent coordination.
+
 
 ##  Key Features
 - **Cyberpunk UI**: Glassmorphism, neon glows, and animated backgrounds.
@@ -15,12 +17,7 @@ Welcome to the future of urban management. **AI City Brain** is a high-end, cybe
 
 ##  Setup Instructions
 
-### 1. Configuration
-Open the `.env` file in the root directory and add your credentials:
-```env
-MONGODB_URL=your_mongodb_connection_string
-OPENWEATHER_API_KEY=your_api_key
-```
+
 
 ### 2. Backend Setup
 ```bash
@@ -28,7 +25,7 @@ cd backend
 pip install -r requirements.txt
 python main.py
 ```
-The API will run on `http://localhost:8000`.
+
 
 ### 3. Frontend Setup
 ```bash
@@ -36,7 +33,7 @@ cd frontend
 npm install
 npm run dev
 ```
-The dashboard will be available at `http://localhost:5173`.
+
 
 ## System Modes
 - **Default**: Balanced urban load.

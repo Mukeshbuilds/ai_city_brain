@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Database, Cpu, Activity, Server, AlertCircle } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 const APIMonitor = ({ theme }) => {
   const [status, setStatus] = useState(null);
@@ -9,7 +10,7 @@ const APIMonitor = ({ theme }) => {
 
   const fetchStatus = async () => {
     try {
-      const res = await axios.get('https://ai-city-brain.onrender.com/api/status');
+      const res = await axios.get(`${API_BASE_URL}/api/status`);
       setStatus(res.data);
       setLoading(false);
     } catch (err) {

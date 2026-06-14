@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Cpu, Zap, Activity } from 'lucide-react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { API_BASE_URL } from '../config';
 
 const CoordinationBrain = ({ data, theme = 'dark' }) => {
   const syncLevel = data?.sync_level || 94.2;
@@ -18,7 +19,7 @@ const CoordinationBrain = ({ data, theme = 'dark' }) => {
   const handleOptimize = async () => {
     try {
       const newState = !isOptimized;
-      await axios.post(`https://ai-city-brain.onrender.com/simulation/policy?policy=green_energy&active=${newState}`);
+      await axios.post(`${API_BASE_URL}/simulation/policy?policy=green_energy&active=${newState}`);
       toast.info(newState ? "ENERGY_OPTIMIZATION_ENABLED" : "ENERGY_OPTIMIZATION_DISABLED", {
         icon: <Zap size={16} color="var(--neon-orange)" />,
         style: { background: 'var(--bg-glass)', border: '1px solid var(--neon-orange)', color: 'var(--text-primary)', fontFamily: 'Orbitron', fontSize: '0.7rem' }

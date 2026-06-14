@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Scale, TrendingDown, TrendingUp, Cpu } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 const PolicyAgent = ({ theme = 'dark' }) => {
   const [policies, setPolicies] = useState({
@@ -16,7 +17,7 @@ const PolicyAgent = ({ theme = 'dark' }) => {
     const newState = !current;
     setPolicies(prev => ({ ...prev, [policy]: newState }));
     try {
-      await axios.post(`https://ai-city-brain.onrender.com/simulation/policy?policy=${policy}&active=${newState}`);
+      await axios.post(`${API_BASE_URL}/simulation/policy?policy=${policy}&active=${newState}`);
     } catch (e) {
       setPolicies(prev => ({ ...prev, [policy]: current }));
     }

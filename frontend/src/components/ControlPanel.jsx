@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Settings, Volume2, VolumeX, Moon, Sun, Cpu, FastForward } from 'lucide-react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { API_BASE_URL } from '../config';
 
 const ControlPanel = ({ theme, setTheme }) => {
   const [config, setConfig] = useState(null);
@@ -14,7 +15,7 @@ const ControlPanel = ({ theme, setTheme }) => {
 
   const fetchConfig = async () => {
     try {
-      const res = await axios.get('https://ai-city-brain.onrender.com/api/system/config');
+      const res = await axios.get(`${API_BASE_URL}/api/system/config`);
       setConfig(res.data);
     } catch (err) {
       console.error(err);
@@ -24,7 +25,7 @@ const ControlPanel = ({ theme, setTheme }) => {
   const updateConfig = async (newConfig) => {
     setSaving(true);
     try {
-      await axios.post('https://ai-city-brain.onrender.com/api/system/config', newConfig);
+      await axios.post(`${API_BASE_URL}/api/system/config`, newConfig);
       setConfig(newConfig);
       toast.success("SYSTEM_CONFIG_UPDATED: SYNCING_NODES");
     } catch (err) {

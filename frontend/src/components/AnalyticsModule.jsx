@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { Activity, Zap, Wind, TrendingUp, TrendingDown } from 'lucide-react';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 const AnalyticsModule = ({ theme }) => {
   const [data, setData] = useState([]);
@@ -10,7 +11,7 @@ const AnalyticsModule = ({ theme }) => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('https://ai-city-brain.onrender.com/analytics');
+      const res = await axios.get(`${API_BASE_URL}/analytics`);
       setData(res.data.slice(-10)); // Last 10 points as requested
       setLoading(false);
     } catch (err) {

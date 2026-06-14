@@ -1,0 +1,36 @@
+# Local env configuration
+.env
+.env*.local
+
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Production builds
+build/
+dist/
+out/
+.next/
+.nuxt/
+
+# IDE / Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store

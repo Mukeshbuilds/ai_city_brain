@@ -11,7 +11,9 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 import httpx
 
+load_dotenv()
 load_dotenv(dotenv_path="../.env")
+
 
 app = FastAPI(title="AI City Brain Core v2")
 

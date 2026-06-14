@@ -4,6 +4,7 @@ import { FileText, Download, Loader2, CheckCircle, Activity, Wind } from 'lucide
 import axios from 'axios';
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import { API_BASE_URL } from '../config';
 
 const ReportsModule = ({ theme }) => {
   const [generating, setGenerating] = useState(false);
@@ -12,7 +13,7 @@ const ReportsModule = ({ theme }) => {
   const generateReport = async (type) => {
     setGenerating(true);
     try {
-      const res = await axios.post(`https://ai-city-brain.onrender.com/api/report/generate?type=${type}`);
+      const res = await axios.post(`${API_BASE_URL}/api/report/generate?type=${type}`);
       setLastReport(res.data.report);
       
       // Auto-trigger Download

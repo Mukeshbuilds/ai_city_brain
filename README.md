@@ -2,18 +2,18 @@
 
 Welcome to the future of urban management. **AI City Brain** is a high-end, cyberpunk-themed smart city control dashboard designed for real-time monitoring and intelligent coordination.
 
-## 🚀 Key Features
+##  Key Features
 - **Cyberpunk UI**: Glassmorphism, neon glows, and animated backgrounds.
 - **Real-Time Data**: Polling system fetching AQI from OpenWeather and simulating Traffic, Energy, and Emergency metrics.
 - **AI Agents**: Monitoring panel for localized AI decision processes.
 - **Simulation**: Live canvas-based particle grid showing urban flow (Vehicles, Pedestrians, Incidents).
 - **Intelligence Graph**: Force-directed knowledge graph of the city's neuromorphic network.
 
-## 🛠️ Project Structure
+##  Project Structure
 - `frontend/`: React + Vite + Framer Motion
 - `backend/`: FastAPI + Python + MongoDB integration
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Configuration
 Open the `.env` file in the root directory and add your credentials:
@@ -38,10 +38,9 @@ npm run dev
 ```
 The dashboard will be available at `http://localhost:5173`.
 
-## 🧠 System Modes
+## System Modes
 - **Default**: Balanced urban load.
 - **Traffic Peak**: Increases traffic density and pollution risk.
 - **Emergency Mode**: Prioritizes emergency response and system security.
 
----
-*Built with ❤️ by AI City Brain Architects.*
+
